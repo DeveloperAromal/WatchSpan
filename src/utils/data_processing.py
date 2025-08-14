@@ -9,7 +9,6 @@ def process(file):
 
     df = pd.read_csv(path)
 
-
     df['Date'] = pd.to_datetime(df["Date"], errors='coerce')
 
     df = df[df['Demand Forecast'] >= 0] 
@@ -19,7 +18,7 @@ def process(file):
         'Weather Condition', 'Seasonality'
     ]
     
-    df = pd.get_dummies[df, categorial_col]
+    df = pd.get_dummies(df, categorial_col)
     
     scaler = StandardScaler()
     
