@@ -1,36 +1,14 @@
-# from colorama import Fore, Style, init
-# from src.server.app import app
-
-from src.utils import process
-
+from src.server.app import app
+from src.utils import banner
+from src.utils import check_info
 
 
-# init(True)
+
+def run_app():
+    banner()
+    check_info()
+    app.run(host="0.0.0.0", port=8583, debug=False)
 
 
-# print(Fore.BLUE +"""
-      
-
-# $$\      $$\           $$\              $$\        $$$$$$\                                
-# $$ | $\  $$ |          $$ |             $$ |      $$  __$$\                               
-# $$ |$$$\ $$ | $$$$$$\$$$$$$\   $$$$$$$\ $$$$$$$\  $$ /  \__| $$$$$$\   $$$$$$\  $$$$$$$\  
-# $$ $$ $$\$$ | \____$$\_$$  _| $$  _____|$$  __$$\ \$$$$$$\  $$  __$$\  \____$$\ $$  __$$\ 
-# $$$$  _$$$$ | $$$$$$$ |$$ |   $$ /      $$ |  $$ | \____$$\ $$ /  $$ | $$$$$$$ |$$ |  $$ |
-# $$$  / \$$$ |$$  __$$ |$$ |$$\$$ |      $$ |  $$ |$$\   $$ |$$ |  $$ |$$  __$$ |$$ |  $$ |
-# $$  /   \$$ |\$$$$$$$ |\$$$$  \$$$$$$$\ $$ |  $$ |\$$$$$$  |$$$$$$$  |\$$$$$$$ |$$ |  $$ |
-# \__/     \__| \_______| \____/ \_______|\__|  \__| \______/ $$  ____/  \_______|\__|  \__|
-#                                                             $$ |                          
-#                                                             $$ |                          
-#                                                             \__|                          
-#                                     Author: Aromal
-#       """+ Style.RESET_ALL)
-
-
-# def run_app():
-#     app.run(host="0.0.0.0", port=8583, debug=False)
-
-# if __name__ == "__main__":
-#     run_app()
-
-
-process()
+if __name__ == "__main__":
+    run_app()
